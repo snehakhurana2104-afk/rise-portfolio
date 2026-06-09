@@ -1,13 +1,14 @@
-:root {
---primary-color: #2A2E5B;
---accent-color: #C5A059;
---bg-color: #FFFFFF;
---text-color: #1A1A1A;
+/* index.css mein add karein */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    margin: 0;
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
