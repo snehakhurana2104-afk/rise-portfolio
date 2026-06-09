@@ -24,7 +24,9 @@ export default function AboutAuthor() {
           <img src={authorImage} alt="Parveen Kumar Mehta" style={{ width: '400px', borderRadius: '15px', objectFit: 'cover' }} />
           <div style={{ flex: 1, backgroundColor: '#1b3a82', padding: '30px', borderRadius: '15px', minWidth: '300px' }}>
             <h3 style={{ fontSize: '28px', marginBottom: '15px' }}>Parveen Kumar Mehta</h3>
-            <p style={{ lineHeight: '1.6', fontSize: '16px', opacity: 0.9 }}>Parveen Kumar Mehta is the CEO of SSDN Technologies...</p>
+            <p style={{ lineHeight: '1.6', fontSize: '16px', opacity: 0.9 }}>Parveen Kumar Mehta is the CEO of SSDN Technologies, an IT training and consulting firm dedicated to upskilling employees and eempowering organizations to achieve sustainable success.</p>
+            <p>With over 22 years of experience across roles as a System Administrator, Consultant, and Instructorn Parveen has trained over 5,000 professionals and traveled to more than 20 countries for delivering impactful, global learning experiences.</p>
+            <p>Having started his career at just 19,Parveen's journey from a small village to leading an internationally recognized training organization has been fueled by a passion for people developement, strengths-based growth, and continuous learning.</p>
           </div>
         </div>
 
@@ -62,7 +64,7 @@ export default function AboutAuthor() {
         <div style={{ background: 'linear-gradient(90deg, #1b3a82, #4a148c)', padding: '40px', borderRadius: '15px', textAlign: 'center' }}>
           <p style={{ fontSize: '20px', fontStyle: 'italic', lineHeight: '1.6' }}>"People thrive when they know their strengths, and organizations succeed when they invest in developing those strengths. This book is my attempt to bridge the gap between awareness and application."</p>
         
-          <p style={{ fontSize: '20px', fontStyle: 'italic', lineHeight: '1.6' }}>"-Parveen Kumar Methta"</p>
+          <p style={{ fontSize: '20px', fontStyle: 'italic', lineHeight: '1.6' }}>-Parveen Kumar Methta</p>
         </div>
       </div>
     </section>
