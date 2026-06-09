@@ -61,8 +61,7 @@ export default function AboutAuthor() {
         {/* Quote Box */}
         <div style={{ background: 'linear-gradient(90deg, #1b3a82, #4a148c)', padding: '40px', borderRadius: '15px', textAlign: 'center' }}>
           <p style={{ fontSize: '20px', fontStyle: 'italic', lineHeight: '1.6' }}>"People thrive when they know their strengths, and organizations succeed when they invest in developing those strengths. This book is my attempt to bridge the gap between awareness and application."</p>
-        </div>
-        <div style={{ background: 'linear-gradient(90deg, #1b3a82, #4a148c)', padding: '40px', borderRadius: '15px', textAlign: 'center' }}>
+        
           <p style={{ fontSize: '20px', fontStyle: 'italic', lineHeight: '1.6' }}>"-Parveen Kumar Methta"</p>
         </div>
       </div>
