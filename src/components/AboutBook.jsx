@@ -1,12 +1,13 @@
 import BookImage from '../assets/Book.jpg'
 
-
+import './AboutBook.css';
 
 export default function AboutBook() {
 
     return (
 
-        <section style={{
+        <section className="about-book-container"
+        style={{
 
             display:'flex',
 
@@ -23,7 +24,8 @@ export default function AboutBook() {
 
         }}>
 
-            <div style={{
+            <div className="book-image-wrapper"
+            style={{
 
                 flex: '0 0 400px',
 
@@ -31,7 +33,7 @@ export default function AboutBook() {
 
                 borderRadius: '40px',
 
-                overflow: 'hidden',
+                overflow: 'visible',
 
                 height: '600px',
 
@@ -53,10 +55,13 @@ export default function AboutBook() {
 
                     objectFit:'cover',
 
+                    objectPosition: 'top',
+
 
                 }}></img>
 
-                <div style={{
+                <div className="book-info-card"
+                style={{
 
                     position:'absolute',
 

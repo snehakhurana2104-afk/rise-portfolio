@@ -1,3 +1,7 @@
+:root {
+  --border: #ddd;     /* Border ka rang */
+  --text-h: #333;     /* Text ka rang */
+}
 .navbar {
   display: flex;
   justify-content: space-between;

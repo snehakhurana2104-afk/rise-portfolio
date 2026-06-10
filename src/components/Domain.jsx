@@ -36,7 +36,8 @@ export default function Domains() {
     };
 
     return (
-        <section style={{ padding: '80px 20px', maxWidth: '1000px', margin: '0 auto', fontFamily: 'sans-serif' }}>
+        <section className='domains-content-box'
+         style={{ padding: '40px 15px', maxWidth: '1000px', margin: '0 auto', fontFamily: 'sans-serif' }}>
             <h2 style={{ textAlign: 'center', fontSize: '42px', marginBottom: '50px', color:'#1a1a2e'}}>The Four Domains</h2>
             <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', marginBottom: '50px', flexWrap: 'wrap' }}>
                 {Object.keys(data).map((tab) => (

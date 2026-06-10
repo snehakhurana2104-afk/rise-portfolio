@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import authorImage from '../assets/author.jpg';
+import './AboutAuthor.css';
 
 export default function AboutAuthor() {
   const stats = [
@@ -10,7 +11,8 @@ export default function AboutAuthor() {
   ];
 
   return (
-    <section style={{ 
+    <section className="about-author-container"
+    style={{ 
       padding: '80px 20px', 
       backgroundColor: '#0a194f', 
       color: '#fff',
@@ -21,13 +23,18 @@ export default function AboutAuthor() {
         
         {/* Main Content */}
         <div style={{ display: 'flex', gap: '40px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '60px' }}>
-          <img src={authorImage} alt="Parveen Kumar Mehta" style={{ width: '400px', borderRadius: '15px', boxShadow: ' 0 10px 30px rgba(0,0,0,0.3)' }} />
+          <div className="author-content-flex">
+          <img src={authorImage} 
+          alt="Parveen Kumar Mehta" 
+          className="author-image"
+          style={{ width: '400px', borderRadius: '15px', boxShadow: ' 0 10px 30px rgba(0,0,0,0.3)' }} />
           <div style={{ flex: 1, backgroundColor: '#1b3a82', padding: '40px', borderRadius: '15px', minWidth: '300px' }}>
             <h3 style={{ fontSize: '28px', marginBottom: '20px' }}>Parveen Kumar Mehta</h3>
             <p style={{ lineHeight: '1.6', fontSize: '16px', marginBottom: '20px' }}>Parveen Kumar Mehta is the CEO of SSDN Technologies, an IT training and consulting firm dedicated to upskilling employees and eempowering organizations to achieve sustainable success.</p>
             <p style={{ lineHeight: '1.8', fontSize: '16px', marginBottom: '20px'}}>With over 22 years of experience across roles as a System Administrator, Consultant, and Instructorn Parveen has trained over 5,000 professionals and traveled to more than 20 countries for delivering impactful, global learning experiences.</p>
             <p style={{ lineHeight: '1.8', fontSize:'16px'}}>Having started his career at just 19,Parveen's journey from a small village to leading an internationally recognized training organization has been fueled by a passion for people developement, strengths-based growth, and continuous learning.</p>
           </div>
+        </div>
         </div>
 
         {/* Stats Grid */}
@@ -65,6 +72,7 @@ export default function AboutAuthor() {
             </Link>
           ))}
         </div>
+       
 
         {/* Quote Box */}
         <div style={{ background: 'linear-gradient(135deg, #1b3a82, #4a148c)', padding: '50px', borderRadius: '15px', textAlign: 'center', boxShadow: '0 5px 20px rgba(0,0,0,0.2)'}}>

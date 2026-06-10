@@ -1,6 +1,8 @@
 import HandshakeImage from '../assets/Handshake.jpg';
+import './Header.css';
 export default function Header() {
     return (
+        
         <section style={{
             height: '80vh',
             backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${HandshakeImage})`,

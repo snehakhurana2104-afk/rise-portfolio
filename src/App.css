@@ -16,3 +16,49 @@ img {
   max-width: 100%;
   height: auto;
 }
+@media (max-width: 768px) {
+  /* Har section ko column mein badlein */
+  section {
+    flex-direction: column !important;
+    padding: 15px !important;
+  }
+  
+  /* Text size chhota karein */
+  h1 { font-size: 28px !important; }
+  h2 { font-size: 20px !important; }
+  
+  /* Buttons ko full width dein */
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+/* Mobile Responsive for Domains Section */
+@media (max-width: 768px) {
+  .domains-section {
+    padding: 20px 10px !important; /* Mobile par padding kam */
+  }
+
+  .domains-section h2 {
+    font-size: 28px !important; /* Title chhota kiya */
+  }
+
+  /* Grid ko aur tight karein */
+  .themes-grid {
+    grid-template-columns: 1fr 1fr !important; /* Mobile par 2 columns */
+    gap: 10px !important;
+  }
+}
+/* App.css ya Domains.css */
+.domains-content-box {
+  background-color: #fff;
+  padding: 50px; /* Default Desktop Padding */
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+@media (max-width: 768px) {
+  .domains-content-box {
+    padding: 20px; /* Mobile Padding */
+  }
+}

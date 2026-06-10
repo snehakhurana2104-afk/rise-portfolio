@@ -1,0 +1,29 @@
+/* AboutAuthor.css */
+.about-author-container {
+  padding: 80px 20px;
+  background-color: #0a194f;
+  color: #fff;
+}
+
+.author-content-flex {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .about-author-container {
+    padding: 40px 15px;
+  }
+
+  .author-image {
+    width: 100% !important; /* Mobile par full width */
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr !important; /* Mobile par stats ek ke niche ek */
+  }
+}

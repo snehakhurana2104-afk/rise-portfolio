@@ -1,0 +1,35 @@
+/* AboutBook.css */
+.about-book-container {
+  display: flex;
+  gap: 80px;
+  padding: 80px 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .about-book-container {
+    flex-direction: column; /* Mobile par upar-niche ho jayega */
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .book-image-wrapper {
+    flex: 0 0 100% !important;
+     /* Mobile par width full le lega */
+    width: 100%;
+    height: 400px !important; /* Mobile par thoda height kam */
+    margin-bottom: 50px;
+  }
+  .book-info-card {
+    position: relative !important; /* Absolute se relative kiya */
+    bottom: 0 !important;
+    left: 0 !important;
+    margin-top: -150px; /* Image ke upar overlapping effect ke liye */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+  }
+}

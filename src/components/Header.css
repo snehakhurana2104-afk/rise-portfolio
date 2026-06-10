@@ -15,3 +15,38 @@
     width: 100%;
   }
 }
+/* mobile.css ya App.css mein add karein */
+@media (max-width: 768px) {
+  /* Poori section ka spacing kam karein */
+  section {
+    padding: 20px !important;
+    height: auto !important; /* Mobile par height content ke hisaab se ho */
+  }
+
+  /* H1 aur H2 ka size chhota karein */
+  h1 { font-size: 32px !important; }
+  h2 { font-size: 20px !important; }
+
+  /* Buttons ko ek ke neeche ek layein */
+  .button-container {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+}
+/* Header.css */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 0 20px !important;
+    text-align: center;
+    align-items: center !important; /* Text ko center mein lane ke liye */
+  }
+
+  .hero-section h1 { font-size: 40px !important; }
+  .hero-section h2 { font-size: 22px !important; }
+  
+  .button-container {
+    flex-direction: column !important; /* Buttons ek ke neeche ek aayenge */
+    gap: 10px !important;
+    width: 100%;
+  }
+}
