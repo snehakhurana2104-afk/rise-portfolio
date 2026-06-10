@@ -1,118 +1,18 @@
-/* General Styles */
-:root {
-  --accent: #ff4500;
-  --accent-bg: #ffe4d9;
-  --accent-border: #ff7f50;
-  --border: #ddd;
-  --text-h: #333;
-  --social-bg: #f4f4f4;
-  --shadow: 0 4px 6px rgba(0,0,0,0.1);
+/* Sabse upar ye add karein */
+* {
+  box-sizing: border-box;
+  max-width: 100%; /* Koi bhi cheez screen se bahar nahi jayegi */
 }
 
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-}
-
-.counter:hover { border-color: var(--accent-border); }
-
-.hero {
-  position: relative;
-  text-align: center;
-}
-
-.hero .base {
-  width: 170px;
-  position: relative;
-  z-index: 0;
-}
-
-/* Responsiveness for Hero */
-@media (max-width: 600px) {
-  .hero .base { width: 120px; }
-}
-
-#center {
+/* Section ko mobile par flex-direction column karein */
+section {
   display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-  padding: 32px 20px;
+  flex-direction: column; /* Row se column mein shift karein */
+  padding: 20px !important;
 }
 
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-}
-
-#next-steps > div {
-  flex: 1 1 0;
-  padding: 32px;
-}
-
-/* Mobile Adjustments for Next Steps */
-@media (max-width: 1024px) {
-  #next-steps {
-    flex-direction: column;
-    text-align: center;
-  }
-  #next-steps > div { padding: 24px 20px; }
-}
-
-#docs { border-right: 1px solid var(--border); }
-@media (max-width: 1024px) {
-  #docs { border-right: none; border-bottom: 1px solid var(--border); }
-}
-
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-  justify-content: center;
-}
-
-#next-steps ul a {
-  color: var(--text-h);
-  font-size: 16px;
-  border-radius: 6px;
-  background: var(--social-bg);
-  display: flex;
-  padding: 6px 12px;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-}
-
-/* Mobile Layout for Buttons */
-@media (max-width: 768px) {
-  #next-steps ul {
-    flex-wrap: wrap;
-  }
-  #next-steps ul li {
-    flex: 1 1 100%;
-  }
-  #next-steps ul a {
-    justify-content: center;
-    width: 100%;
-  }
-}
-
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-}
-
-@media (max-width: 1024px) {
-  #spacer { height: 48px; }
+/* Image ka size control karein */
+img {
+  max-width: 100%;
+  height: auto;
 }

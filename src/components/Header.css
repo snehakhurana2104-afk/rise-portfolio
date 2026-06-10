@@ -1,0 +1,17 @@
+/* Tablet aur Mobile ke liye styling */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 0 20px !important;
+    align-items: center !important; /* Mobile par center align */
+    text-align: center;
+  }
+
+  .hero-section h1 { font-size: 40px !important; }
+  .hero-section h2 { font-size: 24px !important; }
+  .hero-section p { font-size: 16px !important; }
+
+  .button-container {
+    flex-direction: column; /* Buttons ek ke neeche ek */
+    width: 100%;
+  }
+}

@@ -22,7 +22,8 @@ export default function Header() {
                 Unlock your natural talents through the CliftonStrengths® framework. 
                 Transform your approach to personal growth and leadership by focusing on what you do best.
             </p>
-            <div style={{ display: 'flex', gap: '20px'}}>
+            <div className='button-container'
+            style={{ display: 'flex', gap: '20px'}}>
                 <button style={{
                     padding:'12px 24px',
                     backgroundColor: '#007BFF',
