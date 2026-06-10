@@ -1,27 +1,26 @@
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import './Navbar.css';
 
-export default function Navbar() {
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav style={{
-      position: 'sticky',
-      top: 0,
-      zIndex: 1000,
-      backgroundColor: '#0a194f', 
-      padding: '15px 50px',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      boxShadow: '0 2px 10px rgba(0,0,0,0.2)'
-    }}>
-      <div style={{ color: '#fff', fontSize: '24px', fontWeight: 'bold' }}>
-        RISE
+    <nav className="navbar">
+      <div className="nav-logo">RISE</div>
+      
+      {/* Hamburger Icon (sirf mobile par dikhega) */}
+      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? '✕' : '☰'}
       </div>
-      <div style={{ display: 'flex', gap: '25px' }}>
-        <Link to="/" style={{ color: '#fff', textDecoration: 'none', fontWeight: '500' }}>Home</Link>
-        <Link to="/about" style={{ color: '#fff', textDecoration: 'none', fontWeight: '500' }}>About</Link>
-        <Link to="/domains" style={{ color: '#fff', textDecoration: 'none', fontWeight: '500' }}>Domains</Link>
-        <Link to="/contact" style={{ color: '#fff', textDecoration: 'none', fontWeight: '500' }}>Contact</Link>
-      </div>
+
+      {/* Navigation Links */}
+      <ul className={`nav-links ${isOpen ? 'show' : ''}`}>
+        <li><a href="#home" onClick={() => setIsOpen(false)}>Home</a></li>
+        <li><a href="#about" onClick={() => setIsOpen(false)}>About</a></li>
+        <li><a href="#next-steps" onClick={() => setIsOpen(false)}>Domains</a></li>
+      </ul>
     </nav>
   );
-}
+};
+
+export default Navbar;
