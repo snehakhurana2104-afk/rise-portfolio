@@ -5,6 +5,7 @@ import Domain from './components/Domain';
 import AboutBook from './components/AboutBook';
 import AboutAuthor from './components/AboutAuthor';
 import StrengthDetail from './components/StrengthDetail';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
