@@ -5,32 +5,34 @@ export default function Footer() {
         
             <div style={{ 
                 backgroundColor: '#1E2A44',
-                padding: '30px',
+                padding: '40px',
+                borderRadius: '8px',
                 display: 'grid', 
-                gridTemplateColumns: 'repeat(3, 1fr)', // Ye 3 barabar column banata hai
+                gridTemplateColumns: 'repeat(auto-fit, minimax(250px, 1fr))', 
                 gap: '40px' 
             }}>
             <div>
              <h3 style={{ color: '#FFFFFF', display:'flex', alignItems:'center', gap:'10px'}}>
                 <FaBook /> RISE
                 </h3>
-             <p>Discover, Develop & Drive Forward with Strengths-Based Leadership. A comprehensive guide to unlocking your natural talents.
+             <p style={{ lineHeight: '1.6' }}>Discover, Develop & Drive Forward with Strengths-Based Leadership. A comprehensive guide to unlocking your natural talents.
              </p>
             </div>
             
            <div>
-                <h4 style={{ color: '#FFFFFF'}}>
+                <h4 style={{ color: '#FFFFFF', marginBottom: '15px'}}>
                     <FaLink /> Quicks Links</h4>
                 <ul style={{ listStyle: 'none', padding: 0}}>
-                    <li>About the Book</li>
-                    <li>Four Domains</li>
-                    <li>About the Author</li>
-                    <li>CliftonStrengths® Assessment</li>
+                    {['About the Book','Four Domains','About the Author','CliftonStrengths® Assessment'].map((item) => (
+                        <li key={item} style={{ marginBottom: '10px', cursor: 'pointer'}}>
+                          ➤ {item}  
+                        </li>
+                    ))}
                 </ul>
                 </div>
                
                <div>
-                <h4 style={{ color: '#FFFFFF'}}>
+                <h4 style={{ color: '#FFFFFF', marginBottom: '15px'}}>
                     <FaUsers/> Connect</h4>
                 <p>📧 contact@example.com</p>
                 <p>🌐 SSDN Technologies</p>
@@ -46,4 +48,5 @@ export default function Footer() {
            </p>
         </footer>
     );
+
 }
