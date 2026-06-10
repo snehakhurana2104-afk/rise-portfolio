@@ -8,7 +8,7 @@ export default function Footer() {
                 padding: '40px',
                 borderRadius: '8px',
                 display: 'grid', 
-                gridTemplateColumns: 'repeat(auto-fit, minimax(250px, 1fr))', 
+                gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
                 gap: '40px' 
             }}>
             <div>
