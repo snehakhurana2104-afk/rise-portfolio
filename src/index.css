@@ -1,14 +1,38 @@
-/* index.css mein add karein */
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  color: #333;
+/* 1. Global Reset - Browser ke default margin/padding ko hatata hai */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: auto;
+/* 2. Default Font - Professional look ke liye */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f7f6; /* Soft light background */
+  color: #333;
+}
+
+/* 3. Link styling - Links ko clean dikhane ke liye */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 4. Button Hover Effect (Jo humne baat ki thi) */
+button:hover {
+  filter: brightness(110%);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* 5. AboutAuthor Stats Grid Hover (Ye aapke AboutAuthor.jsx ke liye hai) */
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* 6. Smooth Scroll - Website ko premium feel deta hai */
+html {
+  scroll-behavior: smooth;
 }

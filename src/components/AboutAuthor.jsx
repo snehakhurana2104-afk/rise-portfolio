@@ -35,7 +35,8 @@ export default function AboutAuthor() {
           display: 'grid', 
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
           gap: '20px', 
-          marginBottom: '60px' 
+          marginBottom: '60px',
+          alignItems: 'stretch'
         }}>
           {stats.map((item, index) => (
             <Link 
@@ -44,7 +45,7 @@ export default function AboutAuthor() {
               style={{ textDecoration: 'none' }}
               >
               <div 
-              className="stat-card" style={{
+              style={{
                 backgroundColor: '#1b3a82', 
                 padding: '25px', 
                 borderRadius: '15px', 
@@ -52,7 +53,11 @@ export default function AboutAuthor() {
                 border: '1px solid #2d4a96',
                 cursor: 'pointer',
                 transition: '0.4s',
-                color: '#fff'
+                color: '#fff',
+                minHeight: '180px',
+                display:'flex',
+                flexDirection: 'column',
+                justifyContent: 'center'
               }}>
                 <div style={{ fontSize: '35px', marginBottom: '10px' }}>{item.icon}</div>
                 <h4 style={{ fontSize: '15px', margin: 0, fontWeight: '500' }}>{item.label}</h4>
@@ -65,7 +70,7 @@ export default function AboutAuthor() {
         <div style={{ background: 'linear-gradient(135deg, #1b3a82, #4a148c)', padding: '50px', borderRadius: '15px', textAlign: 'center', boxShadow: '0 5px 20px rgba(0,0,0,0.2)'}}>
           <p style={{ fontSize: '22px', fontStyle: 'italic', lineHeight: '1.6', marginBottom: '20px' }}>"People thrive when they know their strengths, and organizations succeed when they invest in developing those strengths. This book is my attempt to bridge the gap between awareness and application."</p>
         
-          <p style={{ fontSize: '18px', fontWeight: '600' }}>-Parveen Kumar Methta</p>
+          <p style={{ fontSize: '18px', fontWeight: '600' }}>- Parveen Kumar Mehta</p>
         </div>
       </div>
     </section>

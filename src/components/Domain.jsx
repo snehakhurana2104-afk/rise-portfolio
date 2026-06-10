@@ -20,14 +20,14 @@ export default function Domains() {
             themes: ['Activator', 'Command', 'Communication', 'Competition', 'Maximizer', 'Self-Assurance', 'Significance', 'Woo']
         },
         'Strategic Thinking': {
-            color: '#0e5202',
+            color: '#2d8a25',
             title: 'Strategic Thinking',
             desc: 'Thinkers, visionaries, and ideas generators who keep teams future-focused, absorb information, and generate insights that lead to smarter decisions.',
             quote: '"These individuals challenge assumptions, inspire new ideas, and help shape strategies that lead to high performance."',
             themes: ['Analytical', 'Context', 'Futuristic', 'Ideation', 'Input', 'Intellection', 'Learner', 'Strategic']
         },
         'Executing': {
-            color: '#3a0463',
+            color: '#5e1796',
             title: 'Executing',
             desc: 'The doers who turn ideas into action and plans into results. They bring discipline, drive, and a relentless focus on outcomes that deliver.',
             quote: '"When others are brainstorming, these individuals are already moving forward - ensuring the team does not just talk, it delivers."',
@@ -36,31 +36,61 @@ export default function Domains() {
     };
 
     return (
-        <section style={{ padding: '60px', maxWidth: '1000px', margin: '0 auto', fontFamily: 'sans-serif' }}>
-            <div style={{ display: 'flex', gap: '15px', marginBottom: '40px' }}>
+        <section style={{ padding: '80px 20px', maxWidth: '1000px', margin: '0 auto', fontFamily: 'sans-serif' }}>
+            <h2 style={{ textAlign: 'center', fontSize: '42px', marginBottom: '50px', color:'#1a1a2e'}}>The Four Domains</h2>
+            <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', marginBottom: '50px', flexWrap: 'wrap' }}>
                 {Object.keys(data).map((tab) => (
-                    <button key={tab} onClick={() => setActiveTab(tab)} style={{ padding: '12px 25px', borderRadius: '25px', border: 'none', backgroundColor: activeTab === tab ? data[tab].color : '#f0ecec', color: activeTab === tab ? '#fff' : '#000', cursor: 'pointer', fontWeight: '600' }}>
+                    <button key={tab} onClick={() => setActiveTab(tab)} 
+                    style={{ padding: '12px 25px', borderRadius: '30px', border: 'none', cursor: 'pointer', fontWeight: '600', transition: '0.3s',
+                     backgroundColor: activeTab === tab ? data[tab].color : '#e0e0e0',
+                      color: activeTab === tab ? '#fff' : '#444',
+                      boxShadow: activeTab === tab ? '0 4px 15px rgba(0,0,0,0.15)': 'none' }}>
                         {tab}
                     </button>
                 ))}
             </div>
 
-            <div style={{ flex: 1 }}>
-                <h2 style={{ fontSize: '36px', color: '#1a1a2e' }}>{data[activeTab].title}</h2>
-                <p style={{ lineHeight: '1.6', color: 'black', margin: '20px 0' }}>{data[activeTab].desc}</p>
-                <p style={{ fontStyle: 'italic', color: 'black', borderLeft: `4px solid ${data[activeTab].color}`, paddingLeft: '15px' }}>{data[activeTab].quote}</p>
-                <hr />
-            </div>
+            <div style={{ backgroundColor: '#fff', padding: '50px', borderRadius: '25px', boxShadow: '0 15px 40px rgba(0,0,0,0.06)' }}>
+                <h2 style={{ fontSize: '36px', color: data[activeTab].color, marginBottom: '20px' }}>{data[activeTab].title}</h2>
+                <p style={{ fontSize: '18px', color: '#444',lineHeight: '1.8', margin: '25px' }}>{data[activeTab].desc}</p>
+                <p style={{ fontStyle: 'italic', color: '#222', borderLeft: `5px solid ${data[activeTab].color}`, paddingLeft: '20px', fontSize:'18px', marginBottom: '30px' }}>{data[activeTab].quote}</p>
+                <hr style={{border: 'none', borderTop: '1px solid #eee', margin: '30px '}} />
+               
+    
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '15px' }}>
                 {data[activeTab].themes.map((theme, i) => (
                     <Link key={i} to={`/strength/${theme}`} style={{ textDecoration: 'none' }}>
-                        <div style={{ padding: '10px', backgroundColor: data[activeTab].color, color: '#fff', borderRadius: '8px', textAlign: 'center', fontSize: '13px', cursor: 'pointer' }}>
+                        <div style={{ padding: '15px', 
+                         border: `1px solid ${data[activeTab].color}`,
+                          color: data[activeTab].color,
+                           borderRadius: '10px',
+                            textAlign: 'center',
+                             fontSize: '15px', 
+                             fontWeight: '600',
+                              transition: '0.3s all ease-in-out',
+                              backgroundColor: data[activeTab].color,
+                              color: '#fff',
+                              border:'none',
+                              cursor: 'pointer',
+                              boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                            }}
+                        onMouseOver={(e) => {
+                            e.currentTarget.style.filter = 'brightness(90%)',
+                            e.currentTarget.style.boxShadow = '0 6px 12px rgba(0,0,0,0.2)';
+                            e.currentTarget.style.transform = 'translateY(-2px)';
+                            }}
+                        onMouseOut={(e) => {
+                            e.currentTarget.style.filter = 'brightness(100)%';
+                            e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+                            e.currentTarget.style.transform = 'translateY(0)';
+                            }}>
                             {theme}
                         </div>
                     </Link>
                 ))}
             </div>
+           </div>
         </section>
     );
 }
