@@ -14,8 +14,8 @@ export default function Header() {
             padding: '0 40px',
 
         }}>
-            <h1 style={{ fontSize: '64px', margin: '0 0 20px 0', color: '#FFFFFF'}}>RISE</h1>
-            <h2 style={{ fontSize: '32px', margin: '10px 0', maxWidth: '600px'}}>
+            <h1 style={{ fontSize: '64px', margin: '0 0 20px 0', color: '#FFFFFF', fontWeight: '800'}}>RISE</h1>
+            <h2 style={{ fontSize: '32px', margin: '10px 0', maxWidth: '600px', fontWeight: '600'}}>
                 Discover,Develop & Drive Forward with Strengths-Based Leadership
             </h2>
             <p style={{ maxWidth: '600px',fontSize: '18px', marginBottom: '30px', }}>
