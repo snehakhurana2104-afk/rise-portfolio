@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
+import { ArrowLeft, Zap, Rocket, Lightbulb, Target, BookOpen } from 'lucide-react';
 export default function StrengthDetail() {
   const { name } = useParams();
 
@@ -552,66 +553,60 @@ export default function StrengthDetail() {
   // Agar name list mein nahi hai, toh fallback object
   const details = contentData[name] || { 
     title: name, 
-    example: 'Content coming soon for this theme...', 
+    example: 'Content coming soon...', 
     growthPlan: ['No plan available yet.'] 
   };
-
+const getIcon = (text) => {
+    if (text.includes('Daily')) return <Zap size={20} className="text-yellow-500" />;
+    if (text.includes('Strategic')) return <Rocket size={20} className="text-purple-500" />;
+    if (text.includes('Coaching')) return <Lightbulb size={20} className="text-blue-500" />;
+    if (text.includes('Leadership')) return <Target size={20} className="text-red-500" />;
+    return <BookOpen size={20} />;
+  };
   return (
-  <div style={{ 
-    padding: '50px', 
-    maxWidth: '900px', 
-    margin: '40 auto',
-     fontFamily: 'sans-serif',
-     background: 'radial-gradient(circle at top right, rgba(255, 255, 200, 0.6), transparent 70%), #ffffff',
-      borderRadius: '30px',
-      boxShadow: '0 20px 40px rgba(0,0,0,0.05)',
-      position: 'relative',
-      overflow: 'hidden'
-     
-  }}>
-    <h1 style={{ color: '#1a2e24', textAlign: 'center' }}>{details.title}</h1>
-    
-    {/* YAHAN SE FLEX CONTAINER SHURU HOTA HAI */}
-    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '40px', marginTop: '30px' }}>
-      
-      {/* LEFT SIDE: Text Content */}
-      <div style={{ flex: 1 }}>
-        <div style={{ lineHeight: '1.6' }}>
-          <p><strong>Example:</strong> {details.example}</p>
-          
-          {details.quote && (
-            <div style={{ margin: '20px 0' }}>
-              <h4 style={{ color: '#1a1a2e' }}>Quote: {details.quote}</h4>
-            </div>
-          )}
+    <motion.div 
+      initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}
+      style={{ minHeight: '100vh', padding: '60px 20px', background: '#fcfcfc', fontFamily: 'Inter' }}
+    >
+      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+        
+        <motion.h1 
+          initial={{ y: -20 }} animate={{ y: 0 }}
+          style={{ fontSize: '3.5rem', color: '#0f172a', textAlign: 'center', marginBottom: '60px' }}
+        >
+          {details.title}
+        </motion.h1>
 
-          <h3>Growth Plan:</h3>
-          <ul style={{ paddingLeft: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '80px', alignItems: 'start' }}>
+          
+          <motion.div initial={{ x: -30 }} animate={{ x: 0 }}>
+            <h2 style={{ color: '#64748b', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '2px' }}>Real-World Application</h2>
+            <p style={{ lineHeight: '1.9', color: '#334155', fontSize: '1.2rem', margin: '20px 0 40px' }}>{details.example}</p>
+
+            <h3 style={{ color: '#0f172a', marginBottom: '25px' }}>Growth Trajectory</h3>
             {details.growthPlan.map((item, index) => (
-              <li key={index} style={{ marginBottom: '10px' }}>{item}</li>
+              <motion.div 
+                key={index}
+                whileHover={{ x: 10, background: '#f1f5f9' }}
+                style={{ padding: '20px', borderRadius: '16px', marginBottom: '15px', border: '1px solid #e2e8f0', display: 'flex', gap: '15px' }}
+              >
+                <div>{getIcon(item)}</div>
+                <p style={{ margin: 0, color: '#475569' }}>{item}</p>
+              </motion.div>
             ))}
-          </ul>
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
+            <img src={details.imageUrl} alt={details.title} style={{ width: '100%', borderRadius: '30px', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.15)' }} />
+          </motion.div>
+        </div>
+
+        <div style={{ textAlign: 'center', marginTop: '80px' }}>
+          <Link to="/" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#0f172a', fontWeight: '600', textDecoration: 'none' }}>
+            <ArrowLeft size={18} /> Back to Dashboard
+          </Link>
         </div>
       </div>
-
-      {/* RIGHT SIDE: Image */}
-      {details.imageUrl && (
-        <div style={{ flex: '0 0 250px', position: 'relative', left: '40px' }}>
-          <img
-            src={details.imageUrl}
-            alt={details.title}
-            style={{ width: '100%', borderRadius: '10px', display: 'block' }}
-          />
-        </div>
-      )}
-    </div>
-    {/* FLEX CONTAINER KHATAM */}
-
-    <div style={{ textAlign: 'center', marginTop: '40px' }}>
-      <Link to="/" style={{ color: '#037ffc', textDecoration: 'none', fontWeight: 'bold' }}>
-        ← Home 
-      </Link>
-    </div>
-  </div>
-);
+    </motion.div>
+  );
 }
