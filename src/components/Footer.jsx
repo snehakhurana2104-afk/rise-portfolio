@@ -1,7 +1,8 @@
 import { FaBook, FaUsers, FaLink} from 'react-icons/fa';
 export default function Footer() {
     return (
-        <footer style={{ padding: '60px 40px', backgroundColor: '#0A1929',color: '#B0B0B0' }}>
+        <footer className="footer-container"
+        style={{ padding: '60px 40px', backgroundColor: '#0A1929',color: '#B0B0B0' }}>
         
             <div style={{ 
                 backgroundColor: '#1E2A44',

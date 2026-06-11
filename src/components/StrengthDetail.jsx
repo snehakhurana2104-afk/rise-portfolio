@@ -311,7 +311,7 @@ export default function StrengthDetail() {
 },
   'Ideation': {
   title: 'Ideation',
-  imageUrl:'',
+  
   // Real-World Success Story
   example: 'Facing a stagnating product roadmap, Arjun used his Ideation talent to facilitate a "Blue Sky" brainstorming session. By encouraging the team to discard all conventional constraints, he surfaced a novel, unconventional feature set that eventually became the company’s primary revenue driver, proving that radical creative thinking can solve systemic business challenges.',
   

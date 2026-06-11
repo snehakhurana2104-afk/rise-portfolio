@@ -62,3 +62,19 @@ img {
     padding: 20px; /* Mobile Padding */
   }
 }
+
+/* Footer.css ya App.css mein add karein */
+@media (max-width: 600px) {
+  .footer-container {
+    padding: 30px 20px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container div {
+    text-align: center; /* Mobile par sab kuch center mein dikhega */
+  }
+  .footer-container h4 {
+    justify-content: center; /* Icon aur heading dono center mein */
+  }
+}
