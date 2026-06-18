@@ -1,0 +1,10 @@
+/* AuthPage.css */
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px; /* dono ke beech ka gap */
+    padding: 50px;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+}

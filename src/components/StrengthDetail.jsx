@@ -18,7 +18,6 @@ export default function StrengthDetail() {
     'Connectedness': {
   title: 'Connectedness',
   imageUrl:'https://i.pinimg.com/1200x/f4/ba/4c/f4ba4c7303978375e76d30a313c60edd.jpg',
-  // Real-World Success Story
   example: 'During a high-pressure product redesign, Ananya observed the team struggling under the weight of missed deadlines and technical friction. Rather than focusing on the delays, she bridged the gap between code and reality by illustrating how their healthcare app was directly improving the lives of patients in rural India. By weaving their daily work into the fabric of a humanitarian mission, she didn\'t just solve a delay—she reignited the team’s morale and sense of professional urgency.',
   
   // Professional Growth Plan
@@ -557,22 +556,22 @@ export default function StrengthDetail() {
     growthPlan: ['No plan available yet.'] 
   };
 const getIcon = (text) => {
-    if (text.includes('Daily')) return <Zap size={20} className="text-yellow-500" />;
-    if (text.includes('Strategic')) return <Rocket size={20} className="text-purple-500" />;
-    if (text.includes('Coaching')) return <Lightbulb size={20} className="text-blue-500" />;
-    if (text.includes('Leadership')) return <Target size={20} className="text-red-500" />;
-    return <BookOpen size={20} />;
+    if (text.includes('Daily')) return <Zap size={22} className="text-yellow-500" />;
+    if (text.includes('Strategic')) return <Rocket size={22} className="text-purple-500" />;
+    if (text.includes('Coaching')) return <Lightbulb size={22} className="text-blue-500" />;
+    if (text.includes('Leadership')) return <Target size={22} className="text-red-500" />;
+    return <BookOpen size={22} className="text-slate-400" />;
   };
   return (
     <motion.div 
       initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}
-      style={{ minHeight: '100vh', padding: '60px 20px', background: '#fcfcfc', fontFamily: 'Inter' }}
+      style={{ minHeight: '100vh', padding: '80px 20px', background: '#f8fafc', fontFamily: "'Inter', sans-serif" }}
     >
       <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
         
         <motion.h1 
-          initial={{ y: -20 }} animate={{ y: 0 }}
-          style={{ fontSize: '3.5rem', color: '#0f172a', textAlign: 'center', marginBottom: '60px' }}
+          initial={{ y: -20 }} animate={{ y: -45}}
+          style={{ fontSize: '3.10rem', color: '#01040c', marginBottom: '-15px', fontWeight: '600', textAlign: 'center'}}
         >
           {details.title}
         </motion.h1>
@@ -580,24 +579,33 @@ const getIcon = (text) => {
         <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '80px', alignItems: 'start' }}>
           
           <motion.div initial={{ x: -30 }} animate={{ x: 0 }}>
-            <h2 style={{ color: '#64748b', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '2px' }}>Real-World Application</h2>
-            <p style={{ lineHeight: '1.9', color: '#334155', fontSize: '1.2rem', margin: '20px 0 40px' }}>{details.example}</p>
+            <h2 style={{ color: 'black', fontSize: '1.70rem' }}>Real-World Application:</h2> <br />
+            <p style={{ lineHeight: '1.5', color: 'rgb(114, 118, 121)', fontSize: '1.15rem', marginBottom: '50px',  }}>{details.example}</p>
 
-            <h3 style={{ color: '#0f172a', marginBottom: '25px' }}>Growth Trajectory</h3>
+            <h3 style={{ color: '#0f172a', marginBottom: '25px', fontSize: '1.4rem' }}>Growth Path:</h3>< br />
             {details.growthPlan.map((item, index) => (
               <motion.div 
                 key={index}
-                whileHover={{ x: 10, background: '#f1f5f9' }}
+                whileHover={{ x: 5, background: '#f1f5f9' }}
                 style={{ padding: '20px', borderRadius: '16px', marginBottom: '15px', border: '1px solid #e2e8f0', display: 'flex', gap: '15px' }}
               >
-                <div>{getIcon(item)}</div>
-                <p style={{ margin: 0, color: '#475569' }}>{item}</p>
+                <div style={{ marginTop: '3px'}}>{getIcon(item)}</div>
+                <p style={{ margin: 0, color: '#475569', lineHeight: '1.6' }}>{item}</p>
               </motion.div>
             ))}
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
-            <img src={details.imageUrl} alt={details.title} style={{ width: '100%', borderRadius: '30px', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.15)' }} />
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
+            <img src={details.imageUrl} alt={details.title} style={{ 
+              width: '100%', 
+              maxHeight: '300px',
+              objectFit: 'cover',
+             borderRadius: '20px',
+             boxShadow: '0 10px 25px -5px  rgba(0,0,0,0.1)' 
+
+               
+            }} 
+            />
           </motion.div>
         </div>
 

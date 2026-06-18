@@ -21,7 +21,7 @@ export default function AboutAuthor() {
       <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
         <h2 style={{ textAlign: 'center', fontSize: '42px', marginBottom: '50px', fontWeight: '700' }}>About The Author</h2>
         
-        {/* Main Content */}
+        {}
         <div style={{ display: 'flex', gap: '40px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '60px' }}>
           <div className="author-content-flex">
           <img src={authorImage} 
@@ -37,7 +37,7 @@ export default function AboutAuthor() {
         </div>
         </div>
 
-        {/* Stats Grid */}
+        {}
         <div style={{ 
           display: 'grid', 
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
@@ -74,7 +74,7 @@ export default function AboutAuthor() {
         </div>
        
 
-        {/* Quote Box */}
+        {}
         <div style={{ background: 'linear-gradient(135deg, #1b3a82, #4a148c)', padding: '50px', borderRadius: '15px', textAlign: 'center', boxShadow: '0 5px 20px rgba(0,0,0,0.2)'}}>
           <p style={{ fontSize: '22px', fontStyle: 'italic', lineHeight: '1.6', marginBottom: '20px' }}>"People thrive when they know their strengths, and organizations succeed when they invest in developing those strengths. This book is my attempt to bridge the gap between awareness and application."</p>
         
