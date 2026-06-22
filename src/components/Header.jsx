@@ -1,48 +1,107 @@
 import HandshakeImage from '../assets/Handshake.jpg';
 import './Header.css';
+
 export default function Header() {
     return (
-        
         <section style={{
-            height: '80vh',
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${HandshakeImage})`,
-            backgroundSize:'cover',
-            backgroundPosition:'center',
-            color:'lightgrey',
-            display:'flex',
-            flexDirection:'column',
+            height: '85vh',
+            // Ek premium subtle dark blue gradient overlay jo image ke contrast ko behtar karega
+            backgroundImage: `linear-gradient(to right, rgba(11, 15, 25, 0.95) 40%, rgba(11, 15, 25, 0.6)), url(${HandshakeImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            color: '#E2E8F0', // Soft slate gray prose ke liye
+            display: 'flex',
+            flexDirection: 'column',
             justifyContent: 'center',
-            alignItems:'flex-start',
-            padding: '0 40px',
-
+            alignItems: 'flex-start',
+            padding: '0 80px', // Extra breathing room left-right mein
+            fontFamily: 'Inter, system-ui, sans-serif'
         }}>
-            <h1 style={{ fontSize: '64px', margin: '0 0 20px 0', color: '#FFFFFF', fontWeight: '800'}}>RISE</h1>
-            <h2 style={{ fontSize: '32px', margin: '10px 0', maxWidth: '600px', fontWeight: '600'}}>
-                Discover,Develop & Drive Forward with Strengths-Based Leadership
+            {/* Minimal Upper Tag */}
+            <div style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                padding: '6px 16px',
+                borderRadius: '100px',
+                backgroundColor: 'rgba(99, 102, 241, 0.15)',
+                border: '1px solid rgba(99, 102, 241, 0.3)',
+                color: '#818CF8',
+                fontSize: '14px',
+                fontWeight: '500',
+                letterSpacing: '0.05em',
+                marginBottom: '24px'
+            }}>
+                ✨ DISCOVER YOUR STRENGTHS
+            </div>
+
+            {/* Main Brand Title with Subtle Depth */}
+            <h1 style={{ 
+                fontSize: '72px', 
+                margin: '0 0 12px 0', 
+                color: '#FFFFFF', 
+                fontWeight: '900',
+                letterSpacing: '-0.03em',
+                lineHeight: '1.1'
+            }}>
+                RISE
+            </h1>
+
+            {/* Sleek Subheading */}
+            <h2 style={{ 
+                fontSize: '36px', 
+                margin: '0 0 20px 0', 
+                maxWidth: '650px', 
+                fontWeight: '700',
+                color: '#F8FAFC',
+                lineHeight: '1.3',
+                letterSpacing: '-0.01em'
+            }}>
+                Discover, Develop & Drive Forward with Strengths-Based Leadership
             </h2>
-            <p style={{ maxWidth: '600px',fontSize: '18px', marginBottom: '30px', }}>
+
+            {/* Clean Description text */}
+            <p style={{ 
+                maxWidth: '580px',
+                fontSize: '18px', 
+                marginBottom: '40px', 
+                color: '#94A3B8', // Muted slate for professional look
+                lineHeight: '1.6',
+                fontWeight: '400'
+            }}>
                 Unlock your natural talents through the CliftonStrengths® framework. 
                 Transform your approach to personal growth and leadership by focusing on what you do best.
             </p>
-            <div className='button-container'
-            style={{ display: 'flex', gap: '20px'}}>
+
+            {/* High-End Executive Buttons */}
+            <div className='button-container' style={{ display: 'flex', gap: '16px' }}>
+                {/* Primary Premium Indigo Button */}
                 <button style={{
-                    padding:'12px 24px',
-                    backgroundColor: '#007BFF',
+                    padding: '14px 28px',
+                    backgroundColor: '#4F46E5', // Royal Indigo
                     color: '#FFFFFF',
                     border: 'none',
-                    borderRadius: '5px',
-                    cursor: 'pointer'
+                    borderRadius: '8px',
+                    fontWeight: '600',
+                    fontSize: '16px',
+                    cursor: 'pointer',
+                    boxShadow: '0 4px 14px 0 rgba(79, 70, 229, 0.4)',
+                    transition: 'all 0.2s ease'
                 }}>
                     Explore The Book 
-
                 </button>
+
+                {/* Secondary Borderless Minimal Button */}
                 <button style={{
-                    padding: '12px 24px',
-                    backgroundColor: 'lightgrey',
-                    border: '1px solid #fff',
-                    borderRadius:'5px',
-                    cursor:'pointer',
+                    padding: '14px 28px',
+                    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                    color: '#F1F5F9',
+                    border: '1px solid rgba(255, 255, 255, 0.15)',
+                    borderRadius: '8px',
+                    fontWeight: '600',
+                    fontSize: '16px',
+                    cursor: 'pointer',
+                    backdropFilter: 'blur(4px)',
+                    transition: 'all 0.2s ease'
                 }}>
                     Learn More
                 </button>
