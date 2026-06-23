@@ -3,10 +3,11 @@ import './Header.css';
 
 export default function Header() {
     return (
-        <section style={{
+        <section className="hero-section"
+        style={{
             height: '85vh',
             // Ek premium subtle dark blue gradient overlay jo image ke contrast ko behtar karega
-            backgroundImage: `linear-gradient(to right, rgba(11, 15, 25, 0.95) 40%, rgba(11, 15, 25, 0.6)), url(${HandshakeImage})`,
+            backgroundImage: `linear-gradient(to right, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.7) 60%, transparent 100%), url(${HandshakeImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             color: '#E2E8F0', // Soft slate gray prose ke liye
@@ -36,11 +37,11 @@ export default function Header() {
 
             {/* Main Brand Title with Subtle Depth */}
             <h1 style={{ 
-                fontSize: '72px', 
+                fontSize: '40px', 
                 margin: '0 0 12px 0', 
                 color: '#FFFFFF', 
                 fontWeight: '900',
-                letterSpacing: '-0.03em',
+                letterSpacing: '-0.04em',
                 lineHeight: '1.1'
             }}>
                 RISE
@@ -48,7 +49,7 @@ export default function Header() {
 
             {/* Sleek Subheading */}
             <h2 style={{ 
-                fontSize: '36px', 
+                fontSize: '20px', 
                 margin: '0 0 20px 0', 
                 maxWidth: '650px', 
                 fontWeight: '700',
@@ -62,9 +63,9 @@ export default function Header() {
             {/* Clean Description text */}
             <p style={{ 
                 maxWidth: '580px',
-                fontSize: '18px', 
+                fontSize: '16px', 
                 marginBottom: '40px', 
-                color: '#94A3B8', // Muted slate for professional look
+                color: '#CBD5E1', // Muted slate for professional look
                 lineHeight: '1.6',
                 fontWeight: '400'
             }}>

@@ -45,10 +45,10 @@ export default function Domains() {
         }}>
             {/* Header with strong dark typography */}
             <h2 style={{ 
-                textAlign: 'center', 
-                fontSize: '40px', 
-                fontWeight: '850', 
-                marginBottom: '48px', 
+                 
+                fontSize: '36px', 
+                fontWeight: '700', 
+                marginBottom: '20px', 
                 color: '#0F172A', 
                 letterSpacing: '-0.02em'
             }}>
@@ -58,16 +58,13 @@ export default function Domains() {
             {/* Light Mode Unified Dock Container */}
             <div style={{ 
                 display: 'flex', 
-                gap: '8px', 
-                justifyContent: 'center', 
-                marginBottom: '48px', 
-                flexWrap: 'wrap',
-                backgroundColor: '#F1F5F9', 
-                padding: '6px',
-                borderRadius: '14px',
-                border: '1px solid #E2E8F0',
-                width: 'fit-content',
-                margin: '0 auto 48px auto'
+                gap: '4px', 
+    backgroundColor: 'rgba(241, 245, 249, 0.7)', 
+    backdropFilter: 'blur(12px)', // Yeh magic effect hai
+    padding: '6px',
+    borderRadius: '16px',
+    border: '1px solid rgba(255, 255, 255, 0.5)',
+    boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)'
             }}>
                 {Object.keys(data).map((tab) => {
                     const isActive = activeTab === tab;
@@ -102,19 +99,20 @@ export default function Domains() {
 
             {/* Premium Light Content Display Card */}
             <div style={{ 
+                position: 'relative',
                 backgroundColor: '#FFFFFF', 
-                padding: '48px', 
-                borderRadius: '20px', 
-                border: '1px solid #E2E8F0',
-                boxShadow: '0 10px 30px rgba(15, 23, 42, 0.04)', 
-                position: 'relative'
+                padding: '56px 56px 56px 72px', 
+                borderRadius: '24px', 
+                border: '1px solid #F1F5F9',
+                boxShadow: '0 20px 40px -10px rgba(15, 23, 42, 0.08)', 
+                overflow: 'hidden'
             }}>
                 {/* Left accent color bar */}
                 <div style={{
                     position: 'absolute',
                     left: '0',
-                    top: '48px',
-                    bottom: '48px',
+                    top: '24px',
+                    bottom: '24px',
                     width: '4px',
                     backgroundColor: data[activeTab].color,
                     borderRadius: '0 4px 4px 0'
@@ -125,7 +123,7 @@ export default function Domains() {
                     fontWeight: '800',
                     color: '#0F172A', 
                     marginBottom: '16px',
-                    letterSpacing: '-0.01em'
+                    
                 }}>
                     {data[activeTab].title}
                 </h2>
@@ -167,24 +165,27 @@ export default function Domains() {
                     {data[activeTab].themes.map((theme, i) => (
                         <Link key={i} to={`/strength/${theme}`} style={{ textDecoration: 'none' }}>
                             <div style={{ 
-                                padding: '14px', 
+                                padding: '12px 16px', 
                                 border: '1px solid #E2E8F0',
-                                borderRadius: '10px',
+                                borderRadius: '8px',
                                 textAlign: 'center',
-                                fontSize: '14px', 
-                                fontWeight: '600',
-                                color: '#334155', 
+                                fontSize: '13px', 
+                                fontWeight: '500',
+                                textTransform: 'uppercase', 
+                                letterSpacing: '0.05em',
+                                color: '#64748B', 
                                 backgroundColor: '#F8FAFC', 
-                                cursor: 'pointer',
-                                transition: 'all 0.2s ease-in-out'
+                                
+                                transition: 'all 0.3s ease'
                             }}
-                            onMouseOver={(e) => {
-                                e.currentTarget.style.borderColor = data[activeTab].color;
-                                e.currentTarget.style.backgroundColor = '#FFFFFF';
-                                e.currentTarget.style.color = data[activeTab].color;
-                                e.currentTarget.style.transform = 'translateY(-2px)';
-                                e.currentTarget.style.boxShadow = `0 6px 16px rgba(15, 23, 42, 0.05)`;
-                            }}
+                           // Ye hover effect try karo
+onMouseOver={(e) => {
+    e.currentTarget.style.borderColor = data[activeTab].color;
+    e.currentTarget.style.backgroundColor = '#FFFFFF';
+    e.currentTarget.style.color = data[activeTab].color;
+    e.currentTarget.style.transform = 'translateY(-4px)'; // Thoda zyada lift
+    e.currentTarget.style.boxShadow = `0 10px 15px -3px rgba(0, 0, 0, 0.1)`; // Deep shadow
+}}
                             onMouseOut={(e) => {
                                 e.currentTarget.style.borderColor = '#E2E8F0';
                                 e.currentTarget.style.backgroundColor = '#F8FAFC';

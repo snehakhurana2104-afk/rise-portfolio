@@ -1,52 +1,33 @@
-/* Tablet aur Mobile ke liye styling */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 0 20px !important;
-    align-items: center !important; /* Mobile par center align */
-    text-align: center;
-  }
+/* Header.css - Sabse clean version */
 
-  .hero-section h1 { font-size: 40px !important; }
-  .hero-section h2 { font-size: 24px !important; }
-  .hero-section p { font-size: 16px !important; }
-
-  .button-container {
-    flex-direction: column; /* Buttons ek ke neeche ek */
-    width: 100%;
-  }
+.hero-section {
+    /* Base styles (desktop) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 80px;
+    height: 85vh;
 }
-/* mobile.css ya App.css mein add karein */
+
+/* Sirf ye ek media query block kaafi hai */
 @media (max-width: 768px) {
-  /* Poori section ka spacing kam karein */
-  section {
-    padding: 20px !important;
-    height: auto !important; /* Mobile par height content ke hisaab se ho */
-  }
+    .hero-section {
+        padding: 0 20px !important;
+        text-align: center;
+        align-items: center !important;
+        height: auto !important; 
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
 
-  /* H1 aur H2 ka size chhota karein */
-  h1 { font-size: 32px !important; }
-  h2 { font-size: 20px !important; }
+    .hero-section h1 { font-size: 40px !important; }
+    .hero-section h2 { font-size: 22px !important; }
+    .hero-section p { font-size: 16px !important; }
 
-  /* Buttons ko ek ke neeche ek layein */
-  .button-container {
-    flex-direction: column !important;
-    gap: 10px !important;
-  }
-}
-/* Header.css */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 0 20px !important;
-    text-align: center;
-    align-items: center !important; /* Text ko center mein lane ke liye */
-  }
-
-  .hero-section h1 { font-size: 40px !important; }
-  .hero-section h2 { font-size: 22px !important; }
-  
-  .button-container {
-    flex-direction: column !important; /* Buttons ek ke neeche ek aayenge */
-    gap: 10px !important;
-    width: 100%;
-  }
+    .button-container {
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100%;
+    }
 }
